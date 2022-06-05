@@ -128,7 +128,7 @@ export default {
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
-  a:hover{
+  .nav-link:hover{
     background-color: #040738;
   }
 
