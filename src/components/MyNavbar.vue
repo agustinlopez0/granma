@@ -88,19 +88,19 @@ export default {
   }
 
   #nav-burguer span:nth-child(1) {
-    top: 0px;
+    top: -10px;
   }
 
   #nav-burguer span:nth-child(2) {
-    top: 10px;
+    top: 0px;
   }
 
   #nav-burguer span:nth-child(3) {
-    top: 20px;
+    top: 10px;
   }
 
   #nav-burguer.open span:nth-child(1) {
-    top: 10px;
+    top: 0px;
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     -o-transform: rotate(135deg);
@@ -113,7 +113,7 @@ export default {
   }
 
   #nav-burguer.open span:nth-child(3) {
-    top: 10px;
+    top: 0px;
     -webkit-transform: rotate(-135deg);
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
@@ -135,6 +135,7 @@ export default {
   header{
     width: 100vw;
     background-color: #30336b;    
+    position: fixed;
   }
 
   .navbar-logo{
@@ -176,7 +177,12 @@ export default {
     display: none;
   }
 
+
+
   @media screen and (max-width: 1000px) {
+    .navbar-img{
+      height: 35px;
+    }
     .nav-item:nth-last-child(1) a {
       background: none;
     }
@@ -190,15 +196,12 @@ export default {
       transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
       display: none;
     }
-    #nav-collapse{
-      display: block;
-    }
     .headerHeigth{
       transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
       height: 110px;
     }
-    .disnone{
-      display: none;
+    #nav-collapse{
+      display: block;
     }
     #nav-collapse ul{
       display: flex;
@@ -224,8 +227,9 @@ export default {
       display: flex;
       justify-content: flex-end;
     }
-
   }
   
-
+  .disnone{
+    display: none!important;;
+  }
 </style>

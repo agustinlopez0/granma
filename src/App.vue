@@ -2,12 +2,18 @@
 
   <MyNavbar />
 
+  <MyHome />
+
+  <MyServices />
+
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
 import MyNavbar from './components/MyNavbar.vue'
+import MyHome from './components/MyHome.vue'
+import MyServices from './components/MyServices.vue'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
@@ -15,7 +21,9 @@ export default {
   components: {
     MyNavbar,
     HelloWorld,
-  }
+    MyHome,
+    MyServices,
+}
 }
 </script>
 
