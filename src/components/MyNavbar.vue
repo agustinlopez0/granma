@@ -172,13 +172,6 @@ export default {
     margin: 0;
   }
 
-  .nav-item:nth-last-child(1) a {
-    background-color: #0a0f69;
-  }
-  .nav-item:nth-last-child(1) a:hover {
-    background-color: #040738;
-
-  }
   #nav-collapse {
     display: none;
   }
