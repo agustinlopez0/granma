@@ -1,7 +1,7 @@
 <template>
-  <header :class="{headerHeigth: !isOpen}">
+  <header :class="{headerHeigth: !isOpen}" >
     <div class="nav-container">
-      <a class="navbar-logo" href="#" title="Granma-Ingeniería Eléctrica">
+      <a class="navbar-logo" @click="closeNav()" href="#" title="Granma-Ingeniería Eléctrica">
         <img src="@/assets/granma-white.png" height="65" class="navbar-img" alt="Electricista matriculado Rosario">
       </a>
 
@@ -24,10 +24,10 @@
     </div>
     <nav id="nav-collapse" :class="{disnone: !isOpen}">
       <ul>
-          <li class="nav-item"> <a class="nav-link" href="#servicios">Servicios</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#quienes-somos">Nosotros</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#clientes">Clientes</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#contacto">Contacto</a> </li>
+          <li class="nav-item" @click="closeNav()"> <a class="nav-link" href="#servicios">Servicios</a> </li>
+          <li class="nav-item" @click="closeNav()"> <a class="nav-link" href="#quienes-somos">Nosotros</a> </li>
+          <li class="nav-item" @click="closeNav()"> <a class="nav-link" href="#clientes">Clientes</a> </li>
+          <li class="nav-item" @click="closeNav()"> <a class="nav-link" href="#contacto">Contacto</a> </li>
         </ul>
     </nav>
   </header>
@@ -42,6 +42,9 @@ export default {
   methods: {
     toggleNav(){
       this.isOpen = !this.isOpen
+    },
+    closeNav(){
+      this.isOpen = false
     }
   }
 }
