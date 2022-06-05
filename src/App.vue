@@ -28,8 +28,19 @@ export default {
 </script>
 
 <style>
-* {
-  margin: 0px;
-  padding: 0px;
-}
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  h3{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin: 15px 0;
+    font-weight: 500;
+  }
+  .line{
+    height: 1px;
+    background-color: rgba(0,0,0,.1);
+  }
 </style>
