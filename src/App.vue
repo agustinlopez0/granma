@@ -51,4 +51,10 @@ export default {
     height: 1px;
     background-color: rgba(0,0,0,.1);
   }
+  .line-2{
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.39);
+    width: 80%;
+    margin: auto;
+  }
 </style>

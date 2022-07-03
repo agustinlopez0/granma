@@ -16,7 +16,7 @@
 
             </section>
 
-            <div class="linea"></div>
+            <div class="line-2"></div>
             <section class="social">
                 <i class="fa-brands fa-instagram"></i>
                 <i class="fa-brands fa-youtube"></i>
@@ -108,12 +108,7 @@ export default {
         cursor: pointer;
     }
 
-    .linea{
-        height: 1px;
-        background-color: rgba(255, 255, 255, 0.39);
-        width: 80%;
-        margin: auto;
-    }
+
 
     .copy{
         padding-bottom: 15px;
