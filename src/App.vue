@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import MyNavbar from './components/MyNavbar.vue'
+import MyNavbar from './components/shared/MyNavbar.vue'
+import MyFooter from './components/shared/MyFooter.vue'
 import MyHome from './components/MyHome.vue'
 import MyServices from './components/MyServices.vue'
 import HelloWorld from './components/HelloWorld.vue'
-import MyFooter from './components/MyFooter.vue'
 import AboutUs from './components/AboutUs.vue'
 
 export default {
