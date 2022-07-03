@@ -6,8 +6,12 @@
 
   <MyServices />
 
+  <AboutUs />
+
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <MyFooter />
 </template>
 
 <script>
@@ -15,6 +19,8 @@ import MyNavbar from './components/MyNavbar.vue'
 import MyHome from './components/MyHome.vue'
 import MyServices from './components/MyServices.vue'
 import HelloWorld from './components/HelloWorld.vue'
+import MyFooter from './components/MyFooter.vue'
+import AboutUs from './components/AboutUs.vue'
 
 export default {
   name: 'App',
@@ -23,6 +29,8 @@ export default {
     HelloWorld,
     MyHome,
     MyServices,
+    MyFooter,
+    AboutUs
 }
 }
 </script>

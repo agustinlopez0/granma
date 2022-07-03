@@ -139,6 +139,7 @@ export default {
     width: 100vw;
     background-color: #30336b;    
     position: fixed;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
   }
 
   .navbar-logo{
