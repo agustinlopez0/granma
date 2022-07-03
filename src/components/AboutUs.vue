@@ -1,5 +1,5 @@
 <template>
-    <section id="nosotros">
+    <section id="quienes-somos">
         <div id="nosotros-container">
             <div class="line"></div>
                 <h3>¿Quiénes Somos?</h3>
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped>
-    #nosotros{
+    #quienes-somos{
         /* background-color: #e8e9ff; */
         background-color: #d5d9df;
     }
