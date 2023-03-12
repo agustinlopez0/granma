@@ -8,10 +8,8 @@
   <MyServices />
   <MyClients />
   <AboutUs />
+  <MyContact />
   
-
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
 
   <MyFooter />
 </template>
@@ -22,17 +20,17 @@ import MyFooter from './components/shared/MyFooter.vue'
 import MyHome from './components/MyHome.vue'
 import MyServices from './components/MyServices.vue'
 import MyClients from './components/MyClients.vue'
-import HelloWorld from './components/HelloWorld.vue'
+import MyContact from './components/MyContact.vue'
 import AboutUs from './components/AboutUs.vue'
 
 export default {
   name: 'App',
   components: {
     MyNavbar,
-    HelloWorld,
     MyHome,
     MyServices,
     MyClients,
+    MyContact,
     MyFooter,
     AboutUs
 }
@@ -40,6 +38,7 @@ export default {
 </script>
 
 <style>
+
   * {
     margin: 0px;
     padding: 0px;

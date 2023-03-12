@@ -6,7 +6,7 @@
                     <img src="@/assets/nelson-lopez.png" alt="">
                 </section>
                 <section id="horarios">
-                    <h3>Horarios</h3>
+                    <h3>Horarios:</h3>
                     <p> Lunes a viernes:
                         8:00 a 20:00 <br>
                         Sábados: 
@@ -129,7 +129,7 @@ export default {
             flex-direction: column;
         }
         #img-footer img{
-            height: 150px;
+            height: 120px;
             margin-bottom: 0px;
             /* animation: latido 2s infinite; */
         }

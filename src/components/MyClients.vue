@@ -97,7 +97,7 @@ export default {
 </script>
 
 <style scoped>
-    #servicios{
+    #clientes{
         background-color: #eee;
     }
     #clients-container{

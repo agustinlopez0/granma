@@ -99,7 +99,7 @@ export default {
 
 <style scoped>
     #servicios{
-        background-color: #eee;
+        background-color: #d5d9df;
     }
     #services-container{
         width: 80%;
