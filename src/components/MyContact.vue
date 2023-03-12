@@ -9,23 +9,26 @@
 
                     <form id="form">
                         <div class="elem-group">
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" title="Completa este campo" placeholder="Ej: Juan Pérez" required id="f-nombre">
+                            <label for="nombre">Nombre: </label>
+                            <input v-model="name" type="text" title="Completa este campo" placeholder="Ej: Juan Pérez" required id="f-nombre">
                         </div>
                         <div class="elem-group">
                             <label for="email">Correo electrónico:</label>
-                            <input type="email" title="Completa este campo" placeholder="Ej: juanperez@gmail.com" required id="f-mail">
+                            <input v-model="mail" type="email" title="Completa este campo" placeholder="Ej: juanperez@gmail.com" required id="f-mail">
                         </div>
 
                         <div class="elem-group">
                             <label for="title">Numero de teléfono:</label>
-                            <input type="tel" required id="f-tel" title="Completa este campo" placeholder="Ej: +54 9 341 123-4567">
+                            <input v-model="tel" type="tel" required id="f-tel" title="Completa este campo" placeholder="Ej: +54 9 341 123-4567">
                         </div>
                         <div class="elem-group">
                             <label for="message">Mensaje:</label>
-                            <textarea title="Completa este campo" placeholder="Deje su consulta aquí." required id="f-mens"></textarea>
+                            <textarea v-model="message" title="Completa este campo" placeholder="Deje su consulta aquí." required id="f-mens"></textarea>
                         </div>
-                        <button class="btn btn-primary" title="Click para enviar"> Enviar</button>
+                        <div id="error" v-if="error.status">
+                            <span>Complete con un {{error.message}} válido antes de enviar</span>
+                        </div>
+                        <button type="button" class="btn btn-primary" @click="sendMessage()" title="Click para enviar"> Enviar</button>
                     </form>
 
                     <div id="info">
@@ -84,6 +87,49 @@
 <script>
 export default {
   name: 'MyContact',
+  data: () => ({
+    name: null,
+    mail: null,
+    tel: null,
+    message: null,
+    error: {status: false, message: null}
+  }),
+  methods: {
+    sendMessage(){
+        if(this.name.match(/[0-9]/) || !this.name){
+            this.error.status = true
+            this.error.message = "nombre"
+        } else if( !this.mail.includes("@") || !this.mail.includes(".") || !this.mail ){
+            this.error.status = true
+            this.error.message = "correo electrónico"
+        } else if( this.tel.match(/[A-Za-z]+/) ||  !this.tel.match(/[0-9]/) || !this.tel){
+            this.error.status = true
+            this.error.message = "numero de teléfono"
+        } else {
+            this.error.status = false
+            this.error.message = null        
+        }
+        
+        // if( !(this.name && this.mail && this.tel &&this.message) ){
+            // }
+            if(!this.error.status){
+            let phone = "5493415116107"
+            // let phone = "5493413469014"
+            let URL = `https://api.whatsapp.com/send?phone=${phone}&text=${this.messageURL}`
+            window.open(URL, '_blank');
+            this.name = null
+            this.mail = null
+            this.tel = null
+            this.message = null
+        }
+    }
+  },
+  computed: {
+    messageURL(){
+        let aux = `_Consulta_%0A*Nombre:* ${this.name}%0A*Correo electrónico:* ${this.mail}%0A*Número de teléfono:* ${this.tel}%0A*Mensaje:* ${this.message}`
+        return aux.replaceAll(" ", "%20").replaceAll("\n", "%0A")
+    }
+  }
 }
 </script>
 
@@ -111,6 +157,11 @@ export default {
         padding: 40px ;
         box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
         background-color: #fcfcfc;
+    }
+    #error span{
+        font-size: 15px;
+        font-family: serif;
+        color: red;
     }
     a{
         text-decoration: none;
