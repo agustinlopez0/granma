@@ -15,19 +15,19 @@
 
       <nav>
         <ul>
-          <li class="nav-item"> <a class="nav-link" href="#servicios">Servicios</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#quienes-somos">Nosotros</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#clientes">Clientes</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#contacto">Contacto</a> </li>
+          <li class="nav-item"> <a class="nav-link" v-smooth-scroll href="#servicios">Servicios</a> </li>
+          <li class="nav-item"> <a class="nav-link" v-smooth-scroll href="#clientes">Clientes</a> </li>
+          <li class="nav-item"> <a class="nav-link" v-smooth-scroll href="#quienes-somos">Nosotros</a> </li>
+          <li class="nav-item"> <a class="nav-link" v-smooth-scroll href="#contacto">Contacto</a> </li>
         </ul>
       </nav>
     </div>
     <nav id="nav-collapse" :class="{disnone: !isOpen}">
       <ul>
-          <li class="nav-item" @click="closeNav()"> <a class="nav-link" href="#servicios">Servicios</a> </li>
-          <li class="nav-item" @click="closeNav()"> <a class="nav-link" href="#quienes-somos">Nosotros</a> </li>
-          <li class="nav-item" @click="closeNav()"> <a class="nav-link" href="#clientes">Clientes</a> </li>
-          <li class="nav-item" @click="closeNav()"> <a class="nav-link" href="#contacto">Contacto</a> </li>
+          <li class="nav-item" @click="closeNav()"> <a class="nav-link" v-smooth-scroll href="#servicios">Servicios</a> </li>
+          <li class="nav-item" @click="closeNav()"> <a class="nav-link" v-smooth-scroll href="#clientes">Clientes</a> </li>
+          <li class="nav-item" @click="closeNav()"> <a class="nav-link" v-smooth-scroll href="#quienes-somos">Nosotros</a> </li>
+          <li class="nav-item" @click="closeNav()"> <a class="nav-link" v-smooth-scroll href="#contacto">Contacto</a> </li>
         </ul>
     </nav>
   </header>

@@ -1,17 +1,19 @@
-<template>
+<template >
+  <main>
+    
+    <MyNavbar />
 
-  <MyNavbar />
+    <MyHome />
 
-  <MyHome />
 
-  
-  <MyServices />
-  <MyClients />
-  <AboutUs />
-  <MyContact />
-  
+    <MyServices />
+    <MyClients />
+    <AboutUs />
+    <MyContact />
 
-  <MyFooter />
+
+    <MyFooter />
+  </main>
 </template>
 
 <script>
@@ -22,6 +24,7 @@ import MyServices from './components/MyServices.vue'
 import MyClients from './components/MyClients.vue'
 import MyContact from './components/MyContact.vue'
 import AboutUs from './components/AboutUs.vue'
+
 
 export default {
   name: 'App',

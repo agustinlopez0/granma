@@ -53,8 +53,6 @@ export default {
                     lastScroll = wrapper.scrollLeft
             }
             
-            console.log("wrapper.scrollLeft " + wrapper.scrollLeft)
-            console.log(  "lastScroll "   + lastScroll)
         }, 1)
 
 
@@ -87,8 +85,8 @@ export default {
     }
   },
   mounted() {
+    this.clientes = this.clientes.concat(this.clientes).concat(this.clientes)
     this.autoScroll()
-
   }
   
 
