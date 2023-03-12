@@ -5,26 +5,28 @@
                 <section id="img-footer">
                     <img src="@/assets/nelson-lopez.png" alt="">
                 </section>
-                <section>
+                <section id="horarios">
                     <h3>Horarios</h3>
-                    <p>Somos un grupo de alumnos de 6to informática del politécnico cursando la materia de schumi que no me acuerdo como se llama</p>
+                    <p> Lunes a viernes:
+                        8:00 a 20:00 <br>
+                        Sábados: 
+                         8:00 a 12:00</p>
                 </section>
-                <section>
-                    <h3>¿Qué es Peliculero?</h3>
-                    <p>Es un sitio web para la recomendación de peliculas basada en tus gustos y experiencias</p>
+                <section id="saludo">
+                    <h3>Lo estamos esperando</h3>
+                    <p>Presupuestos sin costo, su consulta no molesta</p>
                 </section>
 
             </section>
 
             <div class="line-2"></div>
             <section class="social">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-youtube"></i>
-                <i class="fa-brands fa-twitch"></i>
-                <i class="fa-brands fa-github"></i>
+                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-whatsapp"></i>
             </section>
 
-            <h2 class="copy">Copyrigth &#169; Peliculero 2022</h2>
+            <h2 class="copy">Copyrigth &#169; Granma {{year}}</h2>
         </section>
     </footer>
 </template>
@@ -32,21 +34,30 @@
 <script>
 export default {
   name: 'MyFooter',
-
+  data: () => ({
+    year: new Date().getFullYear()
+  })
 }
 </script>
 
 <style scoped>
     #footer-container{
         width: 90%;
+        margin: auto;
+        padding-top: 1rem;
+        font-family: 'Poppins', sans-serif;
+
     }
     footer{
         margin: auto;
         background-color: #30336b;
-        font-family: 'Poppins', sans-serif;        
         font-size: 20px;
         color: white;
         text-shadow: var(--footer-shadow);
+    }
+    h3{
+        margin: 0;
+        text-align: left;
     }
 
     .top-footer{
@@ -58,9 +69,8 @@ export default {
      padding: 20px;
     }
 
-    .top-footer section p,
-    .top-footer section h3{
-        font-family: "neon";
+    #horarios{
+
     }
 
     .top-footer section p{
@@ -74,7 +84,6 @@ export default {
 
     footer h2{
         font-size: 15px;
-        font-family: "neon";
         text-align: center;
     }
 
