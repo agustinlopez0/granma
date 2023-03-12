@@ -4,9 +4,11 @@
 
   <MyHome />
 
+  
   <MyServices />
-
+  <MyClients />
   <AboutUs />
+  
 
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -19,6 +21,7 @@ import MyNavbar from './components/shared/MyNavbar.vue'
 import MyFooter from './components/shared/MyFooter.vue'
 import MyHome from './components/MyHome.vue'
 import MyServices from './components/MyServices.vue'
+import MyClients from './components/MyClients.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import AboutUs from './components/AboutUs.vue'
 
@@ -29,6 +32,7 @@ export default {
     HelloWorld,
     MyHome,
     MyServices,
+    MyClients,
     MyFooter,
     AboutUs
 }
