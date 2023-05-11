@@ -2,7 +2,7 @@
   "homepage": "https://agustinlopez0.github.io/granma/",
   "name": "granma",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "predeploy": "npm run build --basename=/granma/",
     "deploy": "gh-pages -d dist",
