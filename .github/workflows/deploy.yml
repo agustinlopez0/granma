@@ -12,13 +12,14 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v2
-        with:
-          node-version: '20'
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
-        with:
-          node-version: '20'
+
+      - name: Use Node.js 20
+        run: |
+          nvm install 20
+          nvm use 20
 
       - name: Install dependencies
         run: npm install
